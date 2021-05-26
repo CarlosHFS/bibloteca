@@ -1,6 +1,6 @@
 # biblioteca
 
-A new Flutter application.
+Aplicativo de bibilioteca criada em flutter
 
 ## Getting Started
 
