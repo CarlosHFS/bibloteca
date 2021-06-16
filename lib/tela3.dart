@@ -1,13 +1,14 @@
+import 'package:biblioteca/widgets/input.dart';
 import 'package:biblioteca/widgets/textos.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-class Empre extends StatefulWidget {
+class Livro extends StatefulWidget {
   @override
-  _EmpreState createState() => _EmpreState();
+  _LivroState createState() => _LivroState();
 }
 
-class _EmpreState extends State<Empre> {
+class _LivroState extends State<Livro> {
   @override
   void initState() {
     super.initState();
@@ -41,7 +42,7 @@ class _EmpreState extends State<Empre> {
           padding: EdgeInsets.all(15),
           child: Column(
             children: [
-              Textos("Emprestimos"),
+              InputTextos("", "Pesquisar Livro"),
             ],
           ),
         ),
@@ -58,7 +59,7 @@ class _EmpreState extends State<Empre> {
       appBar: AppBar(
         elevation: 0,
         backgroundColor: Colors.transparent,
-        title: Textos("Emprestimos"),
+        title: Textos("Livros"),
       ),
       body: Stack(
         children: <Widget>[

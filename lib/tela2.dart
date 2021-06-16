@@ -2,12 +2,12 @@ import 'package:biblioteca/widgets/textos.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-class Empre extends StatefulWidget {
+class Perfil extends StatefulWidget {
   @override
-  _EmpreState createState() => _EmpreState();
+  _PerfilState createState() => _PerfilState();
 }
 
-class _EmpreState extends State<Empre> {
+class _PerfilState extends State<Perfil> {
   @override
   void initState() {
     super.initState();
@@ -29,23 +29,24 @@ class _EmpreState extends State<Empre> {
     return Padding(
       padding: EdgeInsets.only(top: 71),
       child: Container(
-        width: width / 1.25,
-        height: height,
-        decoration: BoxDecoration(
-            color: Colors.white,
-            borderRadius: BorderRadius.only(
-              topRight: Radius.circular(27),
-              topLeft: Radius.circular(27),
-            )),
-        child: Padding(
-          padding: EdgeInsets.all(15),
-          child: Column(
-            children: [
-              Textos("Emprestimos"),
-            ],
-          ),
-        ),
-      ),
+          width: width / 1.25,
+          height: height / 1.3,
+          decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.only(
+                topRight: Radius.circular(27),
+                topLeft: Radius.circular(27),
+                bottomRight: Radius.circular(27),
+                bottomLeft: Radius.circular(27),
+              )),
+          child: Padding(
+            padding: EdgeInsets.all(15),
+            child: Column(
+              children: [
+                Textos("Perfil"),
+              ],
+            ),
+          )),
     );
   }
 
@@ -58,7 +59,7 @@ class _EmpreState extends State<Empre> {
       appBar: AppBar(
         elevation: 0,
         backgroundColor: Colors.transparent,
-        title: Textos("Emprestimos"),
+        title: Textos("2"),
       ),
       body: Stack(
         children: <Widget>[
@@ -66,7 +67,7 @@ class _EmpreState extends State<Empre> {
               alignment: Alignment.bottomCenter,
               child: _buildBottomCard(width, height)),
           Align(
-            alignment: Alignment.bottomCenter,
+            alignment: Alignment.topCenter,
             child: _buildCenterCard(width, height),
           ),
         ],

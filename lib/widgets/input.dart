@@ -12,14 +12,8 @@ class InputTextos extends StatelessWidget {
     return TextFormField(
       controller: controller,
       style: TextStyle(
-          color: Color(0xffdddddd),
-          fontSize: 25,
-          fontWeight: FontWeight.w200
-      ),
-      decoration: InputDecoration(
-          labelText: rotulo,
-          hintText: label
-      ),
+          color: Colors.black, fontSize: 24, fontWeight: FontWeight.bold),
+      decoration: InputDecoration(labelText: rotulo, hintText: label),
     );
   }
 }
